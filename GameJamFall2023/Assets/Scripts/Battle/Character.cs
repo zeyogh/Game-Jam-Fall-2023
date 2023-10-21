@@ -4,15 +4,34 @@ using UnityEngine;
 
 public class Character : MonoBehaviour
 {
-    public bool isStunned = false;
+
+    public enum CharType
+    {
+        FILLER,
+        HEALER,
+        BUFFER,
+        DEBUFFER
+    }
+
+    public CharType type;
+
+    public ProgressBar progressBar;
+
+    public int specialVal;
+
+    public int specialValBase;
+
+    public bool isDebuffed;
+
+    public bool focused; //for reticle
 
     public float speed = 2.0f;
 
     public Attack[] attacks = new Attack[2];
 
-    private float x;
+    private float origX;
 
-    private float y;
+    private float origY;
 
     private bool move = false;
 
@@ -20,8 +39,8 @@ public class Character : MonoBehaviour
 
     private void Start()
     {
-        x = this.transform.position.x;
-        y = this.transform.position.y;
+        origX = this.transform.position.x;
+        origY = this.transform.position.y;
         movement();
     }
 
@@ -36,9 +55,9 @@ public class Character : MonoBehaviour
         {
             if (reverseDir)
             {
-                Vector2 newPosition = Vector2.MoveTowards(transform.position, new Vector2(x, y), speed * Time.deltaTime);
+                Vector2 newPosition = Vector2.MoveTowards(transform.position, new Vector2(origX, origY), speed * Time.deltaTime);
                 transform.position = new Vector2(newPosition.x, newPosition.y);
-                if (Mathf.Abs(this.transform.position.x - x) <= 0.05f && Mathf.Abs(this.transform.position.y - y) <= 0.05f)
+                if (Mathf.Abs(this.transform.position.x - origX) <= 0.05f && Mathf.Abs(this.transform.position.y - origY) <= 0.05f)
                 {
                     reverseDir = false;
                     move = false;
@@ -66,20 +85,19 @@ public class Character : MonoBehaviour
         move = true;
     }
 
-    public void attackBasic()
+    public void attackBasic(Character ch)
     {
-
+        attacks[0].activate(ch);
     }
 
-    public void attackSpecial()
+    public void attackSpecial(Character ch)
     {
-
+        attacks[1].activate(ch);
     }
 
     private void movement()
     {
         move = true;
-        Debug.Log("move!");
     }
 
 }
