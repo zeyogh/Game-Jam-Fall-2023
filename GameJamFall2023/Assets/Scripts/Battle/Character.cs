@@ -32,37 +32,38 @@ public class Character : MonoBehaviour
 
     public void FixedUpdate()
     {
-        Debug.Log(this.transform.position.x + " " + this.transform.position.y);
-        if (move && reverseDir)
+        if (move)
         {
-            Vector2 newPosition = Vector2.MoveTowards(transform.position, new Vector2(x, y), speed * Time.deltaTime);
-            transform.position = new Vector2(newPosition.x, newPosition.y);
-            Debug.Log("backwards!");
-            if (this.transform.position.x > Mathf.Abs(0.05f))
+            if (reverseDir)
             {
-                reverseDir = false;
-                move = false;
-                Debug.Log("stop!");
+                Vector2 newPosition = Vector2.MoveTowards(transform.position, new Vector2(x, y), speed * Time.deltaTime);
+                transform.position = new Vector2(newPosition.x, newPosition.y);
+                if (Mathf.Abs(this.transform.position.x - x) <= 0.05f && Mathf.Abs(this.transform.position.y - y) <= 0.05f)
+                {
+                    reverseDir = false;
+                    move = false;
+                }
+            }
+            else if (Mathf.Abs(this.transform.position.x) > 0.05f || Mathf.Abs(this.transform.position.y) > 0.05f) //Moving towards (0, 0)
+            {
+                Vector2 newPosition = Vector2.MoveTowards(transform.position, new Vector2(0, 0), speed * Time.deltaTime);
+                transform.position = new Vector2(newPosition.x, newPosition.y);
+            }
+            else
+            {
+                StartCoroutine(pause());
+                reverseDir = true;
             }
         }
-        else if (move && Mathf.Abs(this.transform.position.x) > 0.05f && Mathf.Abs(this.transform.position.y) > 0.05f) //Moving towards (0, 0)
-        {
-            Vector2 newPosition = Vector2.MoveTowards(transform.position, new Vector2(0, 0), speed * Time.deltaTime);
-            transform.position = new Vector2(newPosition.x, newPosition.y);
-            //Debug.Log("forwards!");
-        }
-        else if (move)
-        {
-            StartCoroutine(pause());
-            reverseDir = true;
-            Debug.Log("pause!");
-        }
+        
 
     }
 
     private IEnumerator pause()
     {
-        yield return new WaitForSeconds(1.0f);
+        move = false;
+        yield return new WaitForSeconds(3.0f);
+        move = true;
     }
 
     public void attackBasic()
