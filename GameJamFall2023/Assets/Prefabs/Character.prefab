@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 3912802545198151585}
   - component: {fileID: 3912802545198151590}
   - component: {fileID: 169208202348812696}
+  - component: {fileID: 5134277639226798868}
+  - component: {fileID: 584933555423590834}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -98,11 +100,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbcc40e9d743cb24b9c6a8b81e6cce08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isStunned: 0
+  type: 0
+  progressBar: {fileID: 0}
+  specialVal: 0
+  specialValBase: 0
+  isDebuffed: 0
+  focused: 0
   speed: 2
   attacks:
   - {fileID: 0}
   - {fileID: 0}
+--- !u!114 &5134277639226798868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3912802545198151584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 853d4c5b004372b47b11bd8398d3f709, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  character: {fileID: 0}
+  type: 0
+  points: 0
+  name: 
+  description: 
+--- !u!114 &584933555423590834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3912802545198151584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 853d4c5b004372b47b11bd8398d3f709, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  character: {fileID: 0}
+  type: 0
+  points: 0
+  name: 
+  description: 
 --- !u!1 &5088267116913061502
 GameObject:
   m_ObjectHideFlags: 0

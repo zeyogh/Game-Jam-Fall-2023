@@ -8,15 +8,27 @@ public class Attack : MonoBehaviour
 
     public enum Type
     {
+        BASIC,
+        SPECIAL
+    }
+
+    public enum Class
+    {
         FILL, //"DPS" role that fills progress bar
         HEAL, //Heals debuffed allies
         BUFF, //Buffs allies
         DEBUFF //Lowers enemy's ability to fill bar
     }
 
+    public Class moveClass;
+
     public Type type;
 
     public int points;
+
+    public new string name = "Some Attack";
+
+    public string description = "Lazy ass description";
 
     public Attack(Type type, int points)
     {
@@ -32,15 +44,15 @@ public class Attack : MonoBehaviour
 
     public void activate(Character ch)
     {
-        if (type == Type.HEAL)
+        if (moveClass == Class.HEAL)
         {
             ch.specialVal = ch.specialValBase;
         }
-        else if (type == Type.DEBUFF)
+        else if (moveClass == Class.DEBUFF)
         {
             ch.specialVal -= ch.specialValBase / 10;
         }
-        else if (type == Type.BUFF)
+        else if (moveClass == Class.BUFF)
         {
             ch.specialVal += ch.specialValBase / 10;
         }
