@@ -159,14 +159,16 @@ public class Combat : MonoBehaviour
                 if (combatEnded)
                 {
                     state = State.FINISHED;
-                    if (gameObject.scene.name.Equals("Battle3"))
+                    SceneManager.LoadScene("Cutscene");
+                    return;
+                    /*if (gameObject.scene.name.Equals("Battle3"))
                     {
                         SceneManager.LoadScene("Final Boss");
                         return;
                     }
                     InfoHolder info = FindObjectOfType<InfoHolder>();
                     info.nextRoom();
-                    SceneManager.LoadScene(info.currentRoom);
+                    SceneManager.LoadScene(info.currentRoom);*/
                     return;
                 }
                 switched = false;
