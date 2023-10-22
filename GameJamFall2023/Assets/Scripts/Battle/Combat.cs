@@ -32,6 +32,8 @@ public class Combat : MonoBehaviour
 
     private int enemyLoop;
 
+    private bool combatEnded;
+
     private Character targetedCharacter;
 
     private Character[] targetList;
@@ -50,6 +52,7 @@ public class Combat : MonoBehaviour
 
     private void Update()
     {
+        //When player is picking a move and target
         if (state == State.PLAYER_SELECT_MOVE)
         {
             if (!switched)
@@ -127,12 +130,12 @@ public class Combat : MonoBehaviour
             {
                 if (selectedMove == 0)
                 {
-                    activeCharacter.attackBasic(targetedCharacter);
+                    combatEnded = activeCharacter.attackBasic(targetedCharacter);
                     menu.showUsingMove(activeCharacter.attacks[0].name, activeCharacter.attacks[0].description);
                 }
                 else
                 {
-                    activeCharacter.attackSpecial(targetedCharacter);
+                    combatEnded = activeCharacter.attackSpecial(targetedCharacter);
                     menu.showUsingMove(activeCharacter.attacks[1].name, activeCharacter.attacks[1].description);
                 }
                 targetedCharacter.toggleReticle(false);
@@ -140,6 +143,8 @@ public class Combat : MonoBehaviour
                 state = State.PLAYER_TURN;
             }
         }
+
+        //Player cutscene
         else if (state == State.PLAYER_TURN)
         {
             if (!switched)
@@ -150,6 +155,11 @@ public class Combat : MonoBehaviour
 
             if (activeCharacter.finishedMoving)
             {
+                if (combatEnded)
+                {
+                    state = State.FINISHED;
+                    return;
+                }
                 switched = false;
                 activeCharacter.finishedMoving = false;
                 state = State.ENEMY_TURN;
@@ -157,6 +167,8 @@ public class Combat : MonoBehaviour
             }
 
         }
+
+        //Enemy cutscene
         else if (state == State.ENEMY_TURN)
         {
             if (!switched)
@@ -166,9 +178,13 @@ public class Combat : MonoBehaviour
                 enemies[enemyLoop].attack();
             }
 
-
             if (enemies[enemyLoop].finishedMoving)
             {
+                if (combatEnded)
+                {
+                    state = State.FINISHED;
+                    return;
+                }
                 enemyLoop++;
                 switched = false;
                 if (enemyLoop == enemies.Length)
@@ -186,6 +202,16 @@ public class Combat : MonoBehaviour
     private void toggleActiveCharacter()
     {
         activeCharIndex =  (activeCharIndex == allies.Length - 1) ? 0 : activeCharIndex++;
+    }
+
+    private void updatePlayerProgress()
+    {
+
+    }
+
+    private void updateEnemyProgress()
+    {
+
     }
 
 

@@ -88,18 +88,20 @@ public class Character : MonoBehaviour
     private IEnumerator pause()
     {
         move = false;
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(0.5f);
         move = true;
     }
 
-    public void attackBasic(Character ch)
+    public bool attackBasic(Character ch)
     {
-        attacks[0].activate(ch);
+        bool done = attacks[0].activate(ch);
+        return done;
     }
 
-    public void attackSpecial(Character ch)
+    public bool attackSpecial(Character ch)
     {
-        attacks[1].activate(ch);
+        bool done = attacks[1].activate(ch);
+        return done;
     }
 
     public void toggleReticle(bool toggle)

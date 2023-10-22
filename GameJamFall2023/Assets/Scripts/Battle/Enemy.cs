@@ -15,6 +15,7 @@ public class Enemy : Character
 
         if (this.specialCost > availableSkillPoints)
         {
+            Debug.Log("Basic 1");
             this.attackBasic(target);
             this.moveCharacter();
             return;
@@ -23,11 +24,13 @@ public class Enemy : Character
         int decider = Random.Range(0, 2);
         if (decider == 0)
         {
+            Debug.Log("Basic 2");
             this.attackBasic(target);
             this.moveCharacter();
         }
         else
         {
+            Debug.Log("You are my Specialz");
             this.attackSpecial(target);
             this.moveCharacter();
         }
