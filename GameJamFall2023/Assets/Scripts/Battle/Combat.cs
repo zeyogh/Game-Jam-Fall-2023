@@ -161,6 +161,7 @@ public class Combat : MonoBehaviour
         {
             if (!switched)
             {
+                switched = true;
                 menu.showUsingMove(enemies[enemyLoop].attacks[0].name, enemies[enemyLoop].attacks[0].description);
                 enemies[enemyLoop].attack();
             }
