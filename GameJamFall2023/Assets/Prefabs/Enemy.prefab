@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 797594878376742454}
   - component: {fileID: 797594878376742455}
   - component: {fileID: 8980791028680619272}
+  - component: {fileID: 3484266434337963029}
+  - component: {fileID: 7635924431131634677}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -102,13 +104,50 @@ MonoBehaviour:
   progressBar: {fileID: 0}
   specialVal: 0
   specialValBase: 0
+  specialCost: 0
   isDebuffed: 0
-  focused: 0
-  speed: 2
+  finishedMoving: 0
   attacks:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 3484266434337963029}
+  - {fileID: 7635924431131634677}
   isBoss: 0
+  team: {fileID: 0}
+--- !u!114 &3484266434337963029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 797594878376742453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 853d4c5b004372b47b11bd8398d3f709, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  character: {fileID: 8980791028680619272}
+  moveClass: 0
+  type: 0
+  points: 0
+  name: 
+  description: 
+--- !u!114 &7635924431131634677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 797594878376742453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 853d4c5b004372b47b11bd8398d3f709, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  character: {fileID: 8980791028680619272}
+  moveClass: 0
+  type: 1
+  points: 0
+  name: 
+  description: 
 --- !u!1 &4325575790628572852
 GameObject:
   m_ObjectHideFlags: 0

@@ -88,7 +88,7 @@ public class Character : MonoBehaviour
     private IEnumerator pause()
     {
         move = false;
-        yield return new WaitForSeconds(3.0f);
+        yield return new WaitForSeconds(1.5f);
         move = true;
     }
 
