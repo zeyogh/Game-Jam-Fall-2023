@@ -17,8 +17,6 @@ public class Door : MonoBehaviour
 
     bool switched = false;
 
-    public string key;
-
     private void Start()
     {
         info = FindObjectOfType<InfoHolder>();
@@ -33,6 +31,7 @@ public class Door : MonoBehaviour
         float playerY = player.transform.position.y;
 
         float distance = Mathf.Sqrt(((x - playerX) * (x - playerX)) + ((y - playerY) * (y - playerY)));
+        //Debug.Log(distance + " " + focused);
 
         if (distance <= dist)
         {
@@ -51,10 +50,6 @@ public class Door : MonoBehaviour
             if (focused)
             {
                 switched = true;
-                if (Input.GetKeyDown("return"))
-                {
-                    enter();
-                }
             }
             else
             {
@@ -66,6 +61,10 @@ public class Door : MonoBehaviour
         if (focused)
         {
             this.transform.GetChild(0).gameObject.SetActive(true);
+            if (Input.GetKeyDown("return"))
+            {
+                enter();
+            }
         }
         else if (!focused)
         {
@@ -75,6 +74,7 @@ public class Door : MonoBehaviour
 
     public void enter()
     {
+        Debug.Log("check");
         InfoHolder info = FindObjectOfType<InfoHolder>();
         info.currentRoom = gameObject.scene.name;
         SceneManager.LoadScene(battle);

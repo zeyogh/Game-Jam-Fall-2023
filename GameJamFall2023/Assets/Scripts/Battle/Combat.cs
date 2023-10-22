@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Combat : MonoBehaviour
 {
@@ -158,6 +159,14 @@ public class Combat : MonoBehaviour
                 if (combatEnded)
                 {
                     state = State.FINISHED;
+                    if (gameObject.scene.name.Equals("Battle3"))
+                    {
+                        SceneManager.LoadScene("Final Boss");
+                        return;
+                    }
+                    InfoHolder info = FindObjectOfType<InfoHolder>();
+                    info.nextRoom();
+                    SceneManager.LoadScene(info.currentRoom);
                     return;
                 }
                 switched = false;
@@ -183,6 +192,7 @@ public class Combat : MonoBehaviour
                 if (combatEnded)
                 {
                     state = State.FINISHED;
+                    SceneManager.LoadScene("GameOver");
                     return;
                 }
                 enemyLoop++;
