@@ -10,6 +10,7 @@ public class RoomPlayerMovement : MonoBehaviour
     public Rigidbody2D rb;
     public Animator animator;
 
+
     Vector2 movement;
 
     // Update is called once per frame
@@ -26,5 +27,10 @@ public class RoomPlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);//Movement
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log("Trigger");
     }
 }
