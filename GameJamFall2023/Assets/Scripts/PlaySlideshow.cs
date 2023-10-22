@@ -3,47 +3,37 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class PlaySlideshow : MonoBehaviour
 {
     [SerializeField] Image currentSlide;
-    [SerializeField] bool start;
 
     [SerializeField] Sprite slide0;
     [SerializeField] Sprite slide1;
     [SerializeField] Sprite slide2;
     [SerializeField] Sprite slide3;
     [SerializeField] Sprite slide4;
-    [SerializeField] Sprite slide5;
-    [SerializeField] Sprite slide6;
 
     [SerializeField] GameObject text;
+    [SerializeField] string[] phrases;
 
     private Sprite[] sprites;
-    int index = 1;
+    int index = 0;
+
+    public bool afterFinalBoss;
 
     private void Start()
     {
+            
+            sprites = new Sprite[5];
+            sprites[0] = slide0;
+            sprites[1] = slide1;
+            sprites[2] = slide2;
+            sprites[3] = slide3;
+        sprites[4] = slide4;
+        text.GetComponent<TMP_Text>().text = phrases[0];
 
-        if (!start)
-        {
-            sprites = new Sprite[4];
-            sprites[0] = slide0;
-            sprites[1] = slide1;
-            sprites[2] = slide2;
-            sprites[3] = slide3;
-        }
-        else
-        {
-            sprites = new Sprite[7];
-            sprites[0] = slide0;
-            sprites[1] = slide1;
-            sprites[2] = slide2;
-            sprites[3] = slide3;
-            sprites[4] = slide4;
-            sprites[5] = slide5;
-            sprites[6] = slide6;
-        }
 
     }
 
@@ -52,26 +42,30 @@ public class PlaySlideshow : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space)) //pressed
         {
 
-            if (!start && index == 4)
-            {
-                SceneManager.LoadScene("Credits");
-            }
-            else
-            {
                 flipToNext();
-            }
         }
     }
 
 
     public void flipToNext()
     {
-        currentSlide.sprite = sprites[index];
-        if (!start && index == 3)
+        if (index == 4)
         {
-            text.SetActive(true);
+            if (!afterFinalBoss)
+            {
+                SceneManager.LoadScene("Final Boss");
+            }
+            else
+            {
+                SceneManager.LoadScene("Credits");
+            }
         }
-        index++;
+        else
+        {
+            index++;
+            currentSlide.sprite = sprites[index];
+            text.GetComponent<TMP_Text>().text = phrases[index];
+        }
     }
 
 }
