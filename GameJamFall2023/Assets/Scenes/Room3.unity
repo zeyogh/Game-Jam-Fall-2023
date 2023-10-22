@@ -361,7 +361,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 419551796}
   dist: 1.2
-  battle: Battle
+  battle: Battle3
   key: return
 --- !u!1 &243632727
 GameObject:

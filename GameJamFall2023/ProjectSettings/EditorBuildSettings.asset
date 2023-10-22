@@ -8,4 +8,40 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Battle.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Title.unity
+    guid: a05897e75b23a944aa9f8dcdd02d77ee
+  - enabled: 1
+    path: Assets/Scenes/Room.unity
+    guid: e7af181a2079b2542a828003d9913512
+  - enabled: 1
+    path: Assets/Scenes/Outro.unity
+    guid: 5790fc6b38db6074095fafae98f4b1db
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/Cutscene.unity
+    guid: c97b76ca6c5c9fe478feefe8c9a66282
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: d5159f060db1c34439fa3177c164ddb2
+  - enabled: 1
+    path: Assets/Scenes/Intro.unity
+    guid: 4314fde066cd17548911cea9d9310140
+  - enabled: 1
+    path: Assets/Scenes/Room3.unity
+    guid: 23b84c758486f3f468ba2d2c553b946a
+  - enabled: 1
+    path: Assets/Scenes/Room2.unity
+    guid: 858042128a768c04f9fb256a78ad38fb
+  - enabled: 1
+    path: Assets/Scenes/Battle2.unity
+    guid: 67287a55374624949b2d959a0980d920
+  - enabled: 1
+    path: Assets/Scenes/Battle3.unity
+    guid: c65d01c2acac29641bd2c667123c0ec7
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: 9869895ec4c9fe84280ec1c7ac7ea974
   m_configObjects: {}

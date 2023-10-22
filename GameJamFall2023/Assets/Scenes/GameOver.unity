@@ -181,7 +181,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Title
+  m_text: Game Over
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -208,8 +208,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 5
-  m_fontSizeBase: 5
+  m_fontSize: 2
+  m_fontSizeBase: 2
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -541,7 +541,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HP: 99
   SP: 5
-  battle: Combat
+  currentRoom: Room
 --- !u!114 &1707771534
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -877,15 +877,15 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2125914805}
-        m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
-        m_MethodName: changeScenes
-        m_Mode: 5
+        m_TargetAssemblyTypeName: ReturnToRoom, Assembly-CSharp
+        m_MethodName: returnToRoom
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Intro
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &2125914803
@@ -935,6 +935,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 2125914800}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 139389e212168654ea32e80bd4b45d2d, type: 3}
+  m_Script: {fileID: 11500000, guid: b972858a79ff7af448a609036abd55a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
