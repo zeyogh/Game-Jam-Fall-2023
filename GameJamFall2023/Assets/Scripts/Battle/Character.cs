@@ -17,13 +17,15 @@ public class Character : MonoBehaviour
 
     public ProgressBar progressBar;
 
-    public int specialVal;
+    public int specialVal; //output value
 
-    public int specialValBase;
+    public int specialValBase; //normal output value
+
+    public int specialCost; //cost for special
 
     public bool isDebuffed;
 
-    public bool focused; //for reticle
+    public bool finishedMoving;
 
     public float speed = 2.0f;
 
@@ -41,7 +43,7 @@ public class Character : MonoBehaviour
     {
         origX = this.transform.position.x;
         origY = this.transform.position.y;
-        movement();
+        //movement();
     }
 
     public Character()
@@ -61,6 +63,7 @@ public class Character : MonoBehaviour
                 {
                     reverseDir = false;
                     move = false;
+                    finishedMoving = true;
                 }
             }
             else if (Mathf.Abs(this.transform.position.x) > 0.05f || Mathf.Abs(this.transform.position.y) > 0.05f) //Moving towards (0, 0)
@@ -95,7 +98,12 @@ public class Character : MonoBehaviour
         attacks[1].activate(ch);
     }
 
-    private void movement()
+    public void toggleReticle(bool toggle)
+    {
+        transform.GetChild(0).gameObject.SetActive(toggle);
+    }
+
+    public void moveCharacter()
     {
         move = true;
     }

@@ -123,6 +123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 0}
+  moveClass: 0
   type: 0
   points: 0
   name: 
@@ -140,6 +141,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 0}
+  moveClass: 0
   type: 0
   points: 0
   name: 
@@ -160,7 +162,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3981380700197438195
 Transform:
   m_ObjectHideFlags: 0

@@ -533,6 +533,7 @@ GameObject:
   m_Component:
   - component: {fileID: 476613303}
   - component: {fileID: 476613304}
+  - component: {fileID: 476613305}
   m_Layer: 0
   m_Name: BattleManager
   m_TagString: Untagged
@@ -579,6 +580,21 @@ MonoBehaviour:
   - {fileID: 1024415285}
   - {fileID: 912929410}
   menu: {fileID: 447740039}
+--- !u!114 &476613305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 476613302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 326073c3354f4604a8c9ee481777a654, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxPoints: 5
+  currentPoints: 3
+  combat: {fileID: 476613304}
 --- !u!1 &478397331
 GameObject:
   m_ObjectHideFlags: 0
@@ -1130,9 +1146,21 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 169208202348812696, guid: da4bd49a707399f4280a796df721f18a, type: 3}
+      propertyPath: specialVal
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 169208202348812696, guid: da4bd49a707399f4280a796df721f18a, type: 3}
       propertyPath: progressBar
       value: 
       objectReference: {fileID: 1067398298903572334}
+    - target: {fileID: 169208202348812696, guid: da4bd49a707399f4280a796df721f18a, type: 3}
+      propertyPath: specialCost
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 169208202348812696, guid: da4bd49a707399f4280a796df721f18a, type: 3}
+      propertyPath: specialValBase
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 169208202348812696, guid: da4bd49a707399f4280a796df721f18a, type: 3}
       propertyPath: attacks.Array.data[0]
       value: 
@@ -1144,6 +1172,10 @@ PrefabInstance:
     - target: {fileID: 584933555423590834, guid: da4bd49a707399f4280a796df721f18a, type: 3}
       propertyPath: type
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 584933555423590834, guid: da4bd49a707399f4280a796df721f18a, type: 3}
+      propertyPath: points
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 584933555423590834, guid: da4bd49a707399f4280a796df721f18a, type: 3}
       propertyPath: character
@@ -1208,6 +1240,10 @@ PrefabInstance:
     - target: {fileID: 3912802545198151585, guid: da4bd49a707399f4280a796df721f18a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5134277639226798868, guid: da4bd49a707399f4280a796df721f18a, type: 3}
+      propertyPath: points
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5134277639226798868, guid: da4bd49a707399f4280a796df721f18a, type: 3}
       propertyPath: character
@@ -1297,13 +1333,29 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8980791028680619272, guid: 4dea92fbb3301bd48a993bd567ef12d1, type: 3}
+      propertyPath: team
+      value: 
+      objectReference: {fileID: 476613305}
+    - target: {fileID: 8980791028680619272, guid: 4dea92fbb3301bd48a993bd567ef12d1, type: 3}
       propertyPath: type
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8980791028680619272, guid: 4dea92fbb3301bd48a993bd567ef12d1, type: 3}
+      propertyPath: specialVal
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8980791028680619272, guid: 4dea92fbb3301bd48a993bd567ef12d1, type: 3}
       propertyPath: progressBar
       value: 
       objectReference: {fileID: 1986146156}
+    - target: {fileID: 8980791028680619272, guid: 4dea92fbb3301bd48a993bd567ef12d1, type: 3}
+      propertyPath: specialCost
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8980791028680619272, guid: 4dea92fbb3301bd48a993bd567ef12d1, type: 3}
+      propertyPath: specialValBase
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4dea92fbb3301bd48a993bd567ef12d1, type: 3}
 --- !u!114 &912929410 stripped
@@ -1546,13 +1598,29 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8980791028680619272, guid: 4dea92fbb3301bd48a993bd567ef12d1, type: 3}
+      propertyPath: team
+      value: 
+      objectReference: {fileID: 476613305}
+    - target: {fileID: 8980791028680619272, guid: 4dea92fbb3301bd48a993bd567ef12d1, type: 3}
       propertyPath: type
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8980791028680619272, guid: 4dea92fbb3301bd48a993bd567ef12d1, type: 3}
+      propertyPath: specialVal
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8980791028680619272, guid: 4dea92fbb3301bd48a993bd567ef12d1, type: 3}
       propertyPath: progressBar
       value: 
       objectReference: {fileID: 1986146156}
+    - target: {fileID: 8980791028680619272, guid: 4dea92fbb3301bd48a993bd567ef12d1, type: 3}
+      propertyPath: specialCost
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8980791028680619272, guid: 4dea92fbb3301bd48a993bd567ef12d1, type: 3}
+      propertyPath: specialValBase
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4dea92fbb3301bd48a993bd567ef12d1, type: 3}
 --- !u!114 &1024415285 stripped
@@ -1735,9 +1803,21 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 169208202348812696, guid: da4bd49a707399f4280a796df721f18a, type: 3}
+      propertyPath: specialVal
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 169208202348812696, guid: da4bd49a707399f4280a796df721f18a, type: 3}
       propertyPath: progressBar
       value: 
       objectReference: {fileID: 1067398298903572334}
+    - target: {fileID: 169208202348812696, guid: da4bd49a707399f4280a796df721f18a, type: 3}
+      propertyPath: specialCost
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 169208202348812696, guid: da4bd49a707399f4280a796df721f18a, type: 3}
+      propertyPath: specialValBase
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 169208202348812696, guid: da4bd49a707399f4280a796df721f18a, type: 3}
       propertyPath: attacks.Array.data[0]
       value: 
@@ -1749,6 +1829,10 @@ PrefabInstance:
     - target: {fileID: 584933555423590834, guid: da4bd49a707399f4280a796df721f18a, type: 3}
       propertyPath: type
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 584933555423590834, guid: da4bd49a707399f4280a796df721f18a, type: 3}
+      propertyPath: points
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 584933555423590834, guid: da4bd49a707399f4280a796df721f18a, type: 3}
       propertyPath: character
@@ -1813,6 +1897,10 @@ PrefabInstance:
     - target: {fileID: 3912802545198151585, guid: da4bd49a707399f4280a796df721f18a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5134277639226798868, guid: da4bd49a707399f4280a796df721f18a, type: 3}
+      propertyPath: points
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5134277639226798868, guid: da4bd49a707399f4280a796df721f18a, type: 3}
       propertyPath: character
@@ -2006,9 +2094,21 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 169208202348812696, guid: da4bd49a707399f4280a796df721f18a, type: 3}
+      propertyPath: specialVal
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 169208202348812696, guid: da4bd49a707399f4280a796df721f18a, type: 3}
       propertyPath: progressBar
       value: 
       objectReference: {fileID: 1067398298903572334}
+    - target: {fileID: 169208202348812696, guid: da4bd49a707399f4280a796df721f18a, type: 3}
+      propertyPath: specialCost
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 169208202348812696, guid: da4bd49a707399f4280a796df721f18a, type: 3}
+      propertyPath: specialValBase
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 169208202348812696, guid: da4bd49a707399f4280a796df721f18a, type: 3}
       propertyPath: attacks.Array.data[0]
       value: 
@@ -2020,6 +2120,10 @@ PrefabInstance:
     - target: {fileID: 584933555423590834, guid: da4bd49a707399f4280a796df721f18a, type: 3}
       propertyPath: type
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 584933555423590834, guid: da4bd49a707399f4280a796df721f18a, type: 3}
+      propertyPath: points
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 584933555423590834, guid: da4bd49a707399f4280a796df721f18a, type: 3}
       propertyPath: character
@@ -2083,6 +2187,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3912802545198151585, guid: da4bd49a707399f4280a796df721f18a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5134277639226798868, guid: da4bd49a707399f4280a796df721f18a, type: 3}
+      propertyPath: points
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5134277639226798868, guid: da4bd49a707399f4280a796df721f18a, type: 3}
@@ -2464,13 +2572,29 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8980791028680619272, guid: 4dea92fbb3301bd48a993bd567ef12d1, type: 3}
+      propertyPath: team
+      value: 
+      objectReference: {fileID: 476613305}
+    - target: {fileID: 8980791028680619272, guid: 4dea92fbb3301bd48a993bd567ef12d1, type: 3}
       propertyPath: type
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8980791028680619272, guid: 4dea92fbb3301bd48a993bd567ef12d1, type: 3}
+      propertyPath: specialVal
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8980791028680619272, guid: 4dea92fbb3301bd48a993bd567ef12d1, type: 3}
       propertyPath: progressBar
       value: 
       objectReference: {fileID: 1986146156}
+    - target: {fileID: 8980791028680619272, guid: 4dea92fbb3301bd48a993bd567ef12d1, type: 3}
+      propertyPath: specialCost
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8980791028680619272, guid: 4dea92fbb3301bd48a993bd567ef12d1, type: 3}
+      propertyPath: specialValBase
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4dea92fbb3301bd48a993bd567ef12d1, type: 3}
 --- !u!114 &797594877397656709 stripped
@@ -2573,6 +2697,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1067398298903572334}
     - target: {fileID: 169208202348812696, guid: da4bd49a707399f4280a796df721f18a, type: 3}
+      propertyPath: specialCost
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 169208202348812696, guid: da4bd49a707399f4280a796df721f18a, type: 3}
       propertyPath: specialValBase
       value: 10
       objectReference: {fileID: 0}
@@ -2658,7 +2786,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5134277639226798868, guid: da4bd49a707399f4280a796df721f18a, type: 3}
       propertyPath: points
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5134277639226798868, guid: da4bd49a707399f4280a796df721f18a, type: 3}
       propertyPath: character
