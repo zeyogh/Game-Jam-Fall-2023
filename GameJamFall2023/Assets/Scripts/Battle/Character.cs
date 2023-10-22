@@ -57,7 +57,7 @@ public class Character : MonoBehaviour
         {
             if (reverseDir)
             {
-                Debug.Log("backwards!");
+                //Debug.Log("backwards!");
                 Vector2 newPosition = Vector2.MoveTowards(transform.position, new Vector2(origX, origY), SPEED * Time.deltaTime);
                 transform.position = new Vector2(newPosition.x, newPosition.y);
                 if (Mathf.Abs(this.transform.position.x - origX) <= 0.05f && Mathf.Abs(this.transform.position.y - origY) <= 0.05f)
@@ -65,18 +65,18 @@ public class Character : MonoBehaviour
                     reverseDir = false;
                     move = false;
                     finishedMoving = true;
-                    Debug.Log("done!");
+                    //Debug.Log("done!");
                 }
             }
             else if (Mathf.Abs(this.transform.position.x) > 0.05f || Mathf.Abs(this.transform.position.y) > 0.05f) //Moving towards (0, 0)
             {
                 Vector2 newPosition = Vector2.MoveTowards(transform.position, new Vector2(0, 0), SPEED * Time.deltaTime);
                 transform.position = new Vector2(newPosition.x, newPosition.y);
-                Debug.Log("forwards!");
+                //Debug.Log("forwards!");
             }
             else
             {
-                Debug.Log("pause!");
+                //Debug.Log("pause!");
                 StartCoroutine(pause());
                 reverseDir = true;
             }

@@ -171,12 +171,12 @@ public class Combat : MonoBehaviour
             {
                 enemyLoop++;
                 switched = false;
-                enemies[enemyLoop].finishedMoving = false;
                 if (enemyLoop == enemies.Length)
                 {
                     enemyLoop = 0;
                     state = State.FINISHED;
                 }
+                enemies[enemyLoop].finishedMoving = false;
             }
 
 
