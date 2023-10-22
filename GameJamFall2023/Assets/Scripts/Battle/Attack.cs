@@ -36,13 +36,14 @@ public class Attack : MonoBehaviour
         this.points = points;
     }
 
-    public void activate()
+    public bool activate()
     {
-        character.progressBar.add(character.specialVal);
+        bool done = character.progressBar.add(character.specialVal);
+        return done;
     }
 
 
-    public void activate(Character ch)
+    public bool activate(Character ch)
     {
         if (moveClass == Class.HEAL)
         {
@@ -55,6 +56,11 @@ public class Attack : MonoBehaviour
         else if (moveClass == Class.BUFF)
         {
             ch.specialVal += ch.specialValBase / 10;
+        }
+        else
+        {
+            bool done = activate();
+            return done;
         }
     }
 }

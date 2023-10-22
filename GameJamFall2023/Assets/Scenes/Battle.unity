@@ -2490,6 +2490,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6058251034694369226, guid: 0bce45d35d41d544295ad73417983909, type: 3}
+      propertyPath: max
+      value: 99
+      objectReference: {fileID: 0}
     - target: {fileID: 7119371708742434327, guid: 0bce45d35d41d544295ad73417983909, type: 3}
       propertyPath: m_Name
       value: EnemyBar
@@ -2658,6 +2662,10 @@ PrefabInstance:
     - target: {fileID: 2132999728607587157, guid: 0bce45d35d41d544295ad73417983909, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6058251034694369226, guid: 0bce45d35d41d544295ad73417983909, type: 3}
+      propertyPath: max
+      value: 99
       objectReference: {fileID: 0}
     - target: {fileID: 7119371708742434327, guid: 0bce45d35d41d544295ad73417983909, type: 3}
       propertyPath: m_Name
