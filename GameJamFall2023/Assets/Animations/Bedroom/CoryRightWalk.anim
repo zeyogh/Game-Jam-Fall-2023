@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: CodyWalkRight
+  m_Name: CoryRightWalk
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,11 +20,11 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: -287827748, guid: e543d2116b001c249ab60b33ebba46f2, type: 3}
-    - time: 0.21666667
-      value: {fileID: 331858637, guid: e543d2116b001c249ab60b33ebba46f2, type: 3}
+      value: {fileID: -707427682, guid: 2707e2bd15c2e494aa5df72e02d45482, type: 3}
+    - time: 0.2
+      value: {fileID: 891378036, guid: 2707e2bd15c2e494aa5df72e02d45482, type: 3}
     - time: 0.41666666
-      value: {fileID: -775691996, guid: e543d2116b001c249ab60b33ebba46f2, type: 3}
+      value: {fileID: 1365591633, guid: 2707e2bd15c2e494aa5df72e02d45482, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -44,9 +44,9 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: -287827748, guid: e543d2116b001c249ab60b33ebba46f2, type: 3}
-    - {fileID: 331858637, guid: e543d2116b001c249ab60b33ebba46f2, type: 3}
-    - {fileID: -775691996, guid: e543d2116b001c249ab60b33ebba46f2, type: 3}
+    - {fileID: -707427682, guid: 2707e2bd15c2e494aa5df72e02d45482, type: 3}
+    - {fileID: 891378036, guid: 2707e2bd15c2e494aa5df72e02d45482, type: 3}
+    - {fileID: 1365591633, guid: 2707e2bd15c2e494aa5df72e02d45482, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
