@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e543d2116b001c249ab60b33ebba46f2
+guid: 2707e2bd15c2e494aa5df72e02d45482
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -105,241 +105,31 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: codyWalkingRight_0
-      rect:
-        serializedVersion: 2
-        x: 84
-        y: 2
-        width: 12
-        height: 27
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: da69bf5929e1a974db0fd3026679c3f9
-      internalID: -287827748
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: codyWalkingRight_1
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 2
-        width: 15
-        height: 27
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0cc790f48a5badd4cbfccf689a29665a
-      internalID: 331858637
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: codyWalkingRight_2
-      rect:
-        serializedVersion: 2
-        x: 111
-        y: 2
-        width: 15
-        height: 27
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1266d5f98c7b40b41a6512d84a096c82
-      internalID: -775691996
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: codyWalkingLeft_0
-      rect:
-        serializedVersion: 2
-        x: 126
-        y: 2
-        width: 12
-        height: 27
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1e0de6979a7f144499df61f933026a16
-      internalID: 1255669946
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: codyWalkingLeft_1
-      rect:
-        serializedVersion: 2
-        x: 138
-        y: 2
-        width: 15
-        height: 27
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: db50a347d59036e4e9dcc1d3ee0ec499
-      internalID: -1899210996
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: codyWalkingLeft_2
-      rect:
-        serializedVersion: 2
-        x: 153
-        y: 2
-        width: 15
-        height: 27
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 62d4570d147bdb34589cb76bb83d713c
-      internalID: 1363322149
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: codyWalkingUp_2
-      rect:
-        serializedVersion: 2
-        x: 70
-        y: 0
-        width: 14
-        height: 29
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f99e18d1e23982b45b0822a04276d374
-      internalID: 926737560
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: codyWalkingUp_1
-      rect:
-        serializedVersion: 2
-        x: 56
-        y: 0
-        width: 14
-        height: 29
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d61c46793467a914aa0248f506d47a71
-      internalID: 53085736
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: codyWalkingUp_0
-      rect:
-        serializedVersion: 2
-        x: 42
-        y: 0
-        width: 14
-        height: 29
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: eec9074c1d0029a409f8bf36b6e4694c
-      internalID: -2057714332
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: codyWalkingDown_2
-      rect:
-        serializedVersion: 2
-        x: 28
-        y: 0
-        width: 14
-        height: 29
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d461b455922dded4eaa1c35d2c8ac2c7
-      internalID: 501624276
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: codyWalkingDown_1
-      rect:
-        serializedVersion: 2
-        x: 14
-        y: 0
-        width: 14
-        height: 29
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 50d4fd96af546fe45a539b804f444240
-      internalID: 1560245222
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: codyWalkingDown_0
+      name: codyWalking 1_0
       rect:
         serializedVersion: 2
         x: 0
+        y: 1
+        width: 14
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5ac0297cc2524b47a3de68a23e32369
+      internalID: -1825647466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: codyWalking 1_1
+      rect:
+        serializedVersion: 2
+        x: 17
         y: 0
         width: 14
         height: 29
@@ -350,8 +140,218 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bf975cf99dd7786439e3b3e16fcc16d5
-      internalID: -1553180817
+      spriteID: 484ac1dd8b91d184d85878cc32e04776
+      internalID: -958371202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: codyWalking 1_2
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 0
+        width: 14
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0e1eaf3c98a7c84e9c803462c8e4702
+      internalID: 1155541444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: codyWalking 1_3
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 1
+        width: 14
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34830527f1d104b458a75f8c71be15b5
+      internalID: -377059346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: codyWalking 1_4
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 0
+        width: 14
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d08c9199569632a49b63d68a698e5b98
+      internalID: -1514232777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: codyWalking 1_5
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 0
+        width: 14
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c40e18d2a4ed9b45bdfc012a05abdfe
+      internalID: 1729734211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: codyWalking 1_6
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 2
+        width: 15
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b66fe9d1426c4f54e970537d30ba964d
+      internalID: -707427682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: codyWalking 1_7
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 2
+        width: 15
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e21cc30d800a07748a1871512e797f86
+      internalID: 891378036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: codyWalking 1_8
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 2
+        width: 15
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a37eaf7e9dfeb1d4ba12e447560ec510
+      internalID: 1365591633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: codyWalking 1_9
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 2
+        width: 15
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66467f61e00b1ed429309ee3928bbf80
+      internalID: 931220899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: codyWalking 1_10
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 2
+        width: 15
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 705f584827acbbb4dbe47ee03e08763a
+      internalID: 2031938923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: codyWalking 1_11
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 2
+        width: 15
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf56e06c2d75d8548bfdf2dd3d8c1b32
+      internalID: -1816827346
       vertices: []
       indices: 
       edges: []
@@ -367,18 +367,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      codyWalkingLeft_1: -1899210996
-      codyWalkingRight_1: 331858637
-      codyWalkingDown_1: 1560245222
-      codyWalkingDown_0: -1553180817
-      codyWalkingLeft_2: 1363322149
-      codyWalkingDown_2: 501624276
-      codyWalkingUp_2: 926737560
-      codyWalkingLeft_0: 1255669946
-      codyWalkingUp_1: 53085736
-      codyWalkingRight_2: -775691996
-      codyWalkingRight_0: -287827748
-      codyWalkingUp_0: -2057714332
+      codyWalking 1_8: 1365591633
+      codyWalking 1_1: -958371202
+      codyWalking 1_3: -377059346
+      codyWalking 1_6: -707427682
+      codyWalking 1_7: 891378036
+      codyWalking 1_2: 1155541444
+      codyWalking 1_11: -1816827346
+      codyWalking 1_4: -1514232777
+      codyWalking 1_10: 2031938923
+      codyWalking 1_0: -1825647466
+      codyWalking 1_9: 931220899
+      codyWalking 1_5: 1729734211
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -267,7 +267,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -1553180817, guid: e543d2116b001c249ab60b33ebba46f2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -306,8 +306,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3222fc5684d607d47b4ece70a72ffaf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 2
   rb: {fileID: 419551797}
+  animator: {fileID: 419551798}
 --- !u!50 &419551797
 Rigidbody2D:
   serializedVersion: 4
@@ -340,7 +341,7 @@ Animator:
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 54ea3b78b1d127245bc9ea3d5e9a2f7e, type: 2}
-  m_CullingMode: 0
+  m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
