@@ -17,6 +17,8 @@ public class Character : MonoBehaviour
 
     public ProgressBar progressBar;
 
+    public SkillPoints sp;
+
     public int specialVal; //output value
 
     public int specialValBase; //normal output value

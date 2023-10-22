@@ -102,6 +102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   progressBar: {fileID: 0}
+  sp: {fileID: 0}
   specialVal: 0
   specialValBase: 0
   specialCost: 0
@@ -125,9 +126,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 8980791028680619272}
-  moveClass: 0
+  moveClass: 4
   type: 0
-  points: 0
+  points: 2
   name: 
   description: 
 --- !u!114 &7635924431131634677

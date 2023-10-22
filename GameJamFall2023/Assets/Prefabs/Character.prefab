@@ -102,11 +102,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   progressBar: {fileID: 0}
+  sp: {fileID: 0}
   specialVal: 0
   specialValBase: 0
+  specialCost: 0
   isDebuffed: 0
-  focused: 0
-  speed: 2
+  finishedMoving: 0
   attacks:
   - {fileID: 0}
   - {fileID: 0}
@@ -123,9 +124,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 0}
-  moveClass: 0
+  moveClass: 4
   type: 0
-  points: 0
+  points: 2
   name: 
   description: 
 --- !u!114 &584933555423590834

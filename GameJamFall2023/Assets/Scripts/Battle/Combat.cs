@@ -190,7 +190,7 @@ public class Combat : MonoBehaviour
                 if (enemyLoop == enemies.Length)
                 {
                     enemyLoop = 0;
-                    state = State.FINISHED;
+                    state = State.PLAYER_SELECT_MOVE;
                 }
                 enemies[enemyLoop].finishedMoving = false;
             }

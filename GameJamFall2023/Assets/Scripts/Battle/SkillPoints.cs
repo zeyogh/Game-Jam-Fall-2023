@@ -8,11 +8,11 @@ public class SkillPoints : MonoBehaviour
 
     int indexOfLastPoint;
 
-    public SkillPoints(int points)
+    void Start()
     {
-        if (points > 9)
+        if (allPoints.Length > 10) //definitely bugged don't add more than 10
         {
-            indexOfLastPoint = 9;
+            indexOfLastPoint = 10;
             foreach (SkillPoint ex in allPoints)
             {
                 ex.gameObject.SetActive(true);
@@ -20,10 +20,11 @@ public class SkillPoints : MonoBehaviour
             return;
         }
 
-        for (int i = 0; i < points; i++)
+        for (int i = 0; i < allPoints.Length; i++)
         {
             allPoints[i].gameObject.SetActive(true);
         }
+        indexOfLastPoint = allPoints.Length - 1;
         
     }
 
@@ -34,11 +35,20 @@ public class SkillPoints : MonoBehaviour
             allPoints[indexOfLastPoint].gameObject.SetActive(false);
             indexOfLastPoint--;
         }
-        else if (indexOfLastPoint < 9)
+        else if (!remove && indexOfLastPoint < 9)
         {
             indexOfLastPoint++;
             allPoints[indexOfLastPoint].gameObject.SetActive(true);
         }
+    }
+
+    public void toggle(int points, bool remove)
+    {
+        for (int i = 0; i < points; i++)
+        {
+            toggle(remove);
+        }
+        
     }
 
     public int getCurrentPoints()
