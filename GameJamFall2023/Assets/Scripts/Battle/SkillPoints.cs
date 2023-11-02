@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class SkillPoints : MonoBehaviour
 {
-    public SkillPoint[] allPoints = new SkillPoint[10]; //note that originally only 5 points
+    public SkillPoint[] allPoints = new SkillPoint[5]; //note that originally only 5 points
 
-    int indexOfLastPoint;
+    int indexOfLastPoint = 4;
 
     void Start()
     {
-        if (allPoints.Length > 10) //definitely bugged don't add more than 10
+        /*if (allPoints.Length > 10) //definitely bugged don't add more than 10
         {
             indexOfLastPoint = 10;
             foreach (SkillPoint ex in allPoints)
@@ -18,13 +18,13 @@ public class SkillPoints : MonoBehaviour
                 ex.gameObject.SetActive(true);
             }
             return;
-        }
+        }*/
 
         for (int i = 0; i < allPoints.Length; i++)
         {
             allPoints[i].gameObject.SetActive(true);
         }
-        indexOfLastPoint = allPoints.Length - 1;
+        //indexOfLastPoint = allPoints.Length - 1;
         
     }
 
@@ -35,7 +35,7 @@ public class SkillPoints : MonoBehaviour
             allPoints[indexOfLastPoint].gameObject.SetActive(false);
             indexOfLastPoint--;
         }
-        else if (!remove && indexOfLastPoint < 9)
+        else if (!remove && indexOfLastPoint < 4)
         {
             indexOfLastPoint++;
             allPoints[indexOfLastPoint].gameObject.SetActive(true);

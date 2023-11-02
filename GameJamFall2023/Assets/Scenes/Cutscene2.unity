@@ -167,6 +167,7 @@ MonoBehaviour:
   - '"AAAAAAAAAAAGHUHEFIHFW"'
   - '"I''ll remember your faces..."'
   - '"You...you Game Development Chumps!"'
+  afterFinalBoss: 1
 --- !u!114 &13573093
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -171,10 +171,10 @@ public class Combat : MonoBehaviour
                     SceneManager.LoadScene(info.currentRoom);*/
                     return;
                 }
+                toggleActiveCharacter();
                 switched = false;
                 activeCharacter.finishedMoving = false;
                 state = State.ENEMY_TURN;
-                toggleActiveCharacter();
             }
 
         }
@@ -213,7 +213,13 @@ public class Combat : MonoBehaviour
 
     private void toggleActiveCharacter()
     {
-        activeCharIndex =  (activeCharIndex == allies.Length - 1) ? 0 : activeCharIndex++;
+        activeCharIndex++;
+        if (activeCharIndex > 3)
+        {
+            activeCharIndex = 0;
+        }
+        activeCharacter = allies[activeCharIndex];
+        Debug.Log(activeCharIndex);
     }
 
     private void updatePlayerProgress()
